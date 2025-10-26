@@ -8,7 +8,7 @@
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
 
-![Demo](https://github.com/jakubfigura/functional_programming/issues/1#issue-3554295165)
+![Demo](https://github.com/user-attachments/assets/2077db4a-cc09-4a85-aaf0-84e001ab69c7)
 
 ✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma 
 <br/>
