@@ -8,11 +8,11 @@
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
 
-[Video](lab1/demos/demo_1.mp4)
+![Demo](https://github.com/jakubfigura/functional_programming/issues/1#issue-3554295165)
 
 ✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma 
 <br/>
-<video src="https://github.com/jakubfigura/functional_programming/blob/main/lab1/demos/demo2.mp4" width="352" height="720"></video>
+
 
 
 ✅ 4.0 Zaimplementuj funkcję setHead, która doda element na początku listy
