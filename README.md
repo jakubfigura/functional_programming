@@ -7,20 +7,35 @@
 # Zestaw 1
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
-
-![Demo](https://github.com/user-attachments/assets/2077db4a-cc09-4a85-aaf0-84e001ab69c7)
-
+<br/>
+[Link kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
+<br/>
+![Demo](https://github.com/user-attachments/assets/af7db49c-339e-43ed-9104-ad9f91c9fa83)
+<br/>
 ✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma 
 <br/>
-
-
-
+[Link kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
+<br/>
+![Demo](https://github.com/user-attachments/assets/2077db4a-cc09-4a85-aaf0-84e001ab69c7)
+<br/>
 ✅ 4.0 Zaimplementuj funkcję setHead, która doda element na początku listy
-
+<br/>
+[Link kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
+<br/>
+![Demo](https://github.com/user-attachments/assets/8af25fec-9503-4f01-b6f4-dcbec35e7dec)
+<br/>
 ✅ 4.5 Zaimplementuj funkcję append, która doda element we wskazanym miejscu w liście
-
+<br/>
+[Link kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
+<br/>
+![Demo](https://github.com/user-attachments/assets/2da5bda7-fd90-4d57-97b8-b913963bc86c)
+<br/>
 ✅ 5.0 Zaimplementuj funkcję, która policzy kwadrat liczb z dwóch list (po wierszach) za pomocą funkcji map oraz funkcji anonimowej
-
+<br/>
+[Link kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
+<br/>
+![Demo](https://github.com/user-attachments/assets/2d093f98-6b73-4192-a297-7f3c7cfc1ca1)
+<br/>
 
 Kod: [Link kodu implementującego rozwiązania zadań 1.1 - 1.5](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
 
