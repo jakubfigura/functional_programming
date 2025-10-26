@@ -1,7 +1,11 @@
 import ujson.{Obj, Value}
+import ujson.Arr.from
 
 object SimpleApp extends cask.MainRoutes{
 
+    override def host: String = "0.0.0.0"
+
+    //Recursive function for checking whether list is sorted.
     def isSorted(list: List[Int], index: Int = 0, key: String): Boolean = {
         if (key == ">"){
             if (index == list.length - 1) {
@@ -22,8 +26,6 @@ object SimpleApp extends cask.MainRoutes{
         }
     }
 
-    override def host: String = "0.0.0.0"
-
     /*
     Excercise 1.1:
     Implement the isSorted function, which checks whether a given list
@@ -31,7 +33,7 @@ object SimpleApp extends cask.MainRoutes{
     */
 
 
-    //Here is an endpoint for sending JSON file, to check wheter list is sorted
+    //Here is an endpoint for sending JSON file, to check whether list is sorted.
     @cask.postJson("/isSorted")
     def jsonEndpoint(data: List[Int], key: String) = {
         val sorted = isSorted(data, index = 0, key)
@@ -39,8 +41,97 @@ object SimpleApp extends cask.MainRoutes{
         "sorted" -> sorted,
         "message" -> (if (sorted) "List is sorted" else "List is NOT sorted")
         )
-        
     }
+
+    /*
+    Excercise 1.2:
+    Implement function, which sum numbers by rows. Use function which maps three arguments into two.
+    */
+    
+    def sum(listA : List[Int], listB: List[Int]): List[Int] = {
+        /*this method converts two list into sequence of tuples (a, b)
+        if size of Lists is diffrent, sequences are filled with (a, 0) or (0, b) tuples.
+        */
+        listA.zipAll(listB, 0, 0).map {case (a, b) => a + b}
+    }
+
+    def sumLists(listA: List[Int], listB: List[Int], listC: List[Int]): List[Int] = {
+        sum(sum(listA, listB), listC)
+    }
+
+
+
+    @cask.postJson("/sumLists")
+    def jsonEndpoint(listA: List[Int], listB: List[Int], listC: List[Int]) = {
+        val summedList = sumLists(listA, listB, listC)
+        Obj(
+            "The sum of provided lists = " -> summedList
+        )
+    }
+
+    /*
+    Excercise 1.3:
+    Implement function setHead, which adds element at the begining of list.
+    */
+
+    @cask.postJson("/setHead")
+    def jsonEndpoint(newHead: Int, list: List[Int]) = {
+        val newList = newHead :: list
+        
+        Obj(
+            "List with new head = " -> newList
+        )
+    }
+
+    /*
+    Excercise 1.4:
+    Implement function append, which adds element in provided index of list.
+    */
+
+    def append(list: List[Int], element: Int, index: Int): List[Int] = {
+        val (first_part, second_part) = list.splitAt(index)
+        first_part ::: (element :: second_part) 
+
+    }
+
+    @cask.postJson("/append")
+    def jsonEndpoint(list: List[Int], element: Int, index: Int) = {
+        if (index < 0 || index > list.length){
+            Obj(
+            "ERROR" -> s"Index $index out of bounds. Choose index from: 0...${list.length}"
+            )
+        }else{
+            val newList = append(list, element, index)
+            Obj(
+                "List with new element" -> newList
+            )
+        }
+
+    }
+
+    /*
+    Excercise 1.5:
+    Implement function, which computes squares from two lists by rows. 
+    */
+
+    def squares(listA : List[Int], listB: List[Int]) = {
+    /*this method converts two list into sequence of tuples (a, b)
+    if size of Lists is diffrent, sequences are filled with (a, 0) or (0, b) tuples.
+    */
+        listA.zipAll(listB, 0, 0).map {case (a, b) => (a*a, b*b)}
+    }
+
+    @cask.postJson("/squares")
+    def jsonEndpoint(listA: List[Int], listB: List[Int]): ujson.Value = {
+        val newList = squares(listA, listB)
+        val arr = from(newList.map{ case (a, b) => ujson.Arr(a, b) })
+        
+        Obj(
+            "Squared elements by rows as tuples: = " -> arr
+        )
+    }
+
+
 
     initialize()
 
