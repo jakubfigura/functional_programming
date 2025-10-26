@@ -35,12 +35,16 @@ object SimpleApp extends cask.MainRoutes{
 
     //Here is an endpoint for sending JSON file, to check whether list is sorted.
     @cask.postJson("/isSorted")
-    def jsonEndpoint(data: List[Int], key: String) = {
+    def jsonEndpoint(data: List[Int], key: String): ujson.Value = {
+        if (key != "<" && key != ">"){
+            return Obj("ERROR" -> s"Wrong key provided. The expected key must be '<' or '>'" )
+        }
         val sorted = isSorted(data, index = 0, key)
         Obj(
-        "sorted" -> sorted,
-        "message" -> (if (sorted) "List is sorted" else "List is NOT sorted")
+            "sorted" -> sorted,
+            "message" -> (if (sorted) "List is sorted" else "List is NOT sorted")
         )
+ 
     }
 
     /*
