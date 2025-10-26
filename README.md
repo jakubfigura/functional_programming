@@ -10,7 +10,7 @@
 <br/>
 [Link do commita 1]((https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala))
 <br/>
-[Demo 1](lab1/demos/zad1_demo.mov)
+<video src="lab1/demos/zad1_demo.mov" width="320" height="240" controls></video>
 <br/>
 ✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma
 <br/>
