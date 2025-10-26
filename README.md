@@ -10,7 +10,8 @@
 
 [Video](lab1/demos/demo_1.mp4)
 
-✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma
+✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma 
+<br/>
 ![video](https://github.com/jakubfigura/functional_programming/blob/main/lab1/demos/demo2.mp4)
 
 
