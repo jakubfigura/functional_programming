@@ -11,7 +11,7 @@
 [Video](lab1/demos/demo_1.mp4)
 
 ✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech list na wejściu; wykorzystaj funkcję sprowadzi funkcję z trzema argumentami, do funkcji z dwoma
-<img width="1052" height="93" alt="image" src="https://github.com/user-attachments/assets/700c7dde-d2b0-4147-acd0-2b83807a7051" />
+![video](https://github.com/jakubfigura/functional_programming/blob/main/lab1/demos/demo2.mp4)
 
 
 ✅ 4.0 Zaimplementuj funkcję setHead, która doda element na początku listy
