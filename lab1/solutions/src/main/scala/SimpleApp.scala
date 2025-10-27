@@ -115,6 +115,52 @@ object SimpleApp extends cask.MainRoutes{
 
     }
 
+    /*
+
+    Excercise 1.4:
+
+    Implement function append, which adds element in provided index of list.
+
+    */
+
+    
+
+    def append(list: List[Int], element: Int, index: Int): List[Int] = {
+
+        val (first_part, second_part) = list.splitAt(index)
+
+        first_part ::: (element :: second_part)
+    }
+
+    
+
+    @cask.postJson("/append")
+
+    def jsonEndpoint(list: List[Int], element: Int, index: Int) = {
+
+        if (index < 0 || index > list.length){
+
+            Obj(
+
+            "ERROR" -> s"Index $index out of bounds. Choose index from: 0...${list.length}"
+
+            )
+
+        }else{
+
+            val newList = append(list, element, index)
+
+            Obj(
+
+            "List with new element" -> newList
+
+            )
+
+        }
+
+    }
+    
+
 
     initialize()
 
