@@ -91,6 +91,29 @@ object SimpleApp extends cask.MainRoutes{
         )
 
     }
+    
+    /*
+
+    Excercise 1.3:
+
+    Implement function setHead, which adds element at the begining of list.
+
+    */
+
+
+    @cask.postJson("/setHead")
+
+    def jsonEndpoint(newHead: Int, list: List[Int]) = {
+
+        val newList = newHead :: list
+
+        Obj(
+
+        "List with new head = " -> newList
+
+        )
+
+    }
 
 
     initialize()
