@@ -159,7 +159,48 @@ object SimpleApp extends cask.MainRoutes{
         }
 
     }
+
+
+    /*
+
+    Excercise 1.5:
+
+    Implement function, which computes squares from two lists by rows.
+
+    */
+
     
+
+    def squares(listA : List[Int], listB: List[Int]) = {
+
+    /*this method converts two list into sequence of tuples (a, b)
+
+    if size of Lists is diffrent, sequences are filled with (a, 0) or (0, b) tuples.
+
+    */
+
+        listA.zipAll(listB, 0, 0).map {case (a, b) => (a*a, b*b)}
+
+    }
+
+    
+
+    @cask.postJson("/squares")
+
+    def jsonEndpoint(listA: List[Int], listB: List[Int]): ujson.Value = {
+
+        val newList = squares(listA, listB)
+
+        val arr = from(newList.map{ case (a, b) => ujson.Arr(a, b) })
+
+        Obj(
+
+        "Squared elements by rows as tuples: = " -> arr
+
+        )
+
+    }
+
 
 
     initialize()
