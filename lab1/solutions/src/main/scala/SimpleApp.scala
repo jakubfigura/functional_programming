@@ -46,6 +46,51 @@ object SimpleApp extends cask.MainRoutes{
         )
  
     }
+    /*
+
+    Excercise 1.2:
+
+    Implement function, which sum numbers by rows. Use function which maps three arguments into two.
+
+    */
+
+    def sum(listA : List[Int], listB: List[Int]): List[Int] = {
+
+    /*this method converts two list into sequence of tuples (a, b)
+
+    if size of Lists is diffrent, sequences are filled with (a, 0) or (0, b) tuples.
+
+    */
+
+        listA.zipAll(listB, 0, 0).map {case (a, b) => a + b}
+
+    }
+
+    
+
+    def sumLists(listA: List[Int], listB: List[Int], listC: List[Int]): List[Int] = {
+
+        sum(sum(listA, listB), listC)
+
+    }
+
+    
+    
+    
+
+    @cask.postJson("/sumLists")
+
+    def jsonEndpoint(listA: List[Int], listB: List[Int], listC: List[Int]) = {
+
+        val summedList = sumLists(listA, listB, listC)
+
+        Obj(
+
+        "The sum of provided lists = " -> summedList
+
+        )
+
+    }
 
 
     initialize()
