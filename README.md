@@ -39,3 +39,20 @@
 
 Kod: [Link kodu implementującego rozwiązania zadań 1.1 - 1.5](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
 
+# Zadanie 2
+Zadanie 2 Ubuntu LTS
+
+Stwórz obraz dockerowy, który bazuje na najnowszej wersji Ubuntu LTS oraz który zawiera paczki:
+
+✅ Java 8
+✅ Python 3
+✅ Scala (dowolna wersja)
+✅ sbt
+✅ vim
+
+Rozwiązanie: ![Dockerfile](https://github.com/jakubfigura/functional_programming/commit/4a4d079b3ef9d8d30aab919c0bfa9c78ba44bca0)
+
+![Demo](https://github.com/user-attachments/assets/f4b22ea9-7b0b-4117-a454-f51184b6624f)
+
+
+
