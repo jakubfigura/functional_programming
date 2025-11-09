@@ -52,7 +52,7 @@ Stwórz obraz dockerowy, który bazuje na najnowszej wersji Ubuntu LTS oraz któ
 
 Rozwiązanie: [Dockerfile](https://github.com/jakubfigura/functional_programming/commit/4a4d079b3ef9d8d30aab919c0bfa9c78ba44bca0)
 
-[Dockerhub](https://hub.docker.com/repository/docker/jakubfigura/ubuntu_24_python_3-scala-sbt-vim_java_zadanie/general)
+[Dockerhub](https://hub.docker.com/r/jakubfigura/ubuntu_24_python_3-scala-sbt-vim_java_zadanie/tags)
 
 ![Demo](https://github.com/user-attachments/assets/f4b22ea9-7b0b-4117-a454-f51184b6624f)
 
