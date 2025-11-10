@@ -6,12 +6,12 @@
 
 # Table of Contents
 
-1. [Zestaw 1](#Zestaw-1)
-2. [Zestaw 2](#Zestaw-2)
-3. [Zestaw 3](#Zestaw-3)
+1. [Zestaw 1](#Zadanie-1)
+2. [Zestaw 2](#Zadanie-2)
+3. [Zestaw 3](#Zadanie-3)
 <br/>
 
-# Zestaw 1
+# Zadanie 1
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
 <br/>
