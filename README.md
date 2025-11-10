@@ -58,13 +58,19 @@ Rozwiązanie: [Dockerfile](https://github.com/jakubfigura/functional_programming
 
 # Zadanie 3
 Zadanie 3 Scala
-✅ 3.0 zwrócą wynik funkcji tail, która usuwa pierwszy element z listy
+<br/>
+✅ 3.0 zwrócą wynik funkcji tail, która usuwa pierwszy element z listy (parameter); należy rozważyć przypadek Nil jako parametr
+<br/>
 [Link do kodu](https://github.com/jakubfigura/functional_programming/commit/3a8b4cdf200cc0e5512467ca7c248bade6c25db2)
-(parameter); należy rozważyć przypadek Nil jako parametr
+<br/>
 ❌ 3.5 zwróci wynik funkcji drop, która usuwa n elementów z listy dwukierunkowej
+<br/>
 ❌ 4.0 zwróci wynik funkcji dropWhile, która usuwa n elementów z listy dwukierunkowej, które spełniają warunek funkcji (parametr); należy wykorzystać podejście pattern match
+<br/>
 ❌ 4.5 zwróci wynik funkcji foldLeft wykorzystując do tego companion object
+<br/>
 ❌ 5.0 zwróci wynik funkcji concatenate na dwóch listach (parametry), która zwraca jedną listę
+
 
 
 
