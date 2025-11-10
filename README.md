@@ -4,6 +4,13 @@
 [PL] Repozytorium zawiera rozwiązania zadań z przedmiotu programowanie funkcyjne na Uniwersytecie Jagiellońskim z roku akademickiego 2025/2026.
 <br/>
 
+# Table of Contents
+
+1. [Zestaw 1](#Zestaw-1)
+2. [Zestaw 2](#Zestaw-2)
+3. [Zestaw 3](#Zestaw-3)
+<br/>
+
 # Zestaw 1
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
