@@ -66,11 +66,13 @@ Rozwiązanie: [Dockerfile](https://github.com/jakubfigura/functional_programming
 # Zadanie 3
 Zadanie 3 Scala
 <br/>
+[Implementasja List](https://github.com/jakubfigura/functional_programming/blob/main/lab3/solutions3/src/main/scala/LinkedList.scala)
+<br/>
 Do zadania 1 należy dodać kilka nowych endpointów, które:
 <br/>
 ✅ 3.0 zwrócą wynik funkcji tail, która usuwa pierwszy element z listy (parameter); należy rozważyć przypadek Nil jako parametr
 <br/>
-[Link do kodu](https://github.com/jakubfigura/functional_programming/commit/3a8b4cdf200cc0e5512467ca7c248bade6c25db2)
+[Link do kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab3/solutions3/src/main/scala/zad3.scala)
 <br/>
 ❌ 3.5 zwróci wynik funkcji drop, która usuwa n elementów z listy dwukierunkowej
 <br/>
