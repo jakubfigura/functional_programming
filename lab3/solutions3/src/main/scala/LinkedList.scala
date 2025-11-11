@@ -43,6 +43,16 @@ sealed trait LinkedList[+A]{
         case Node(data, next, _) => data +: next.listToSeq
     }
 
+    def dropN(n: Int): LinkedList[A] = {
+        if(n <=0){
+            this
+        }
+        else this match{
+            case Nil => Nil
+            case Node(_, next, _) => next.dropN(n-1) 
+        }
+    }
+
 }
 
 object LinkedList{
