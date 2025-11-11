@@ -16,5 +16,15 @@ sealed trait SinglyLinkedList[+A]{
         case Nil => Seq.empty
         case NextNode(head, next) => head +: next.convertToSeq
     }
+    
+}
 
+object SinglyLinkedList{
+    def apply[A](next: A*): SinglyLinkedList[A] = 
+    if(next.isEmpty){
+        Nil
+    }
+    else{
+    NextNode(next.head, apply(next.tail*))
+    }
 }
