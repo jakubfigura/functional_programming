@@ -6,12 +6,12 @@
 
 # Table of Contents
 
-1. [Zestaw 1](#Zadanie-1)
-2. [Zestaw 2](#Zadanie-2)
-3. [Zestaw 3](#Zadanie-3)
+1. [Zestaw 1](#Zestaw-1)
+2. [Zestaw 2](#Zestaw-2)
+3. [Zestaw 3](#Zestaw-3)
 <br/>
 
-# Zadanie 1
+# Zestaw 1
 
 ✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja jest posortowana zgodnie z podaną funkcją porównawczą
 <br/>
@@ -46,8 +46,8 @@
 
 Kod: [Link kodu implementującego rozwiązania zadań 1.1 - 1.5](https://github.com/jakubfigura/functional_programming/blob/main/lab1/solutions/src/main/scala/SimpleApp.scala)
 
-# Zadanie 2
-Zadanie 2 Ubuntu LTS
+# Zestaw 2
+Zadanie Ubuntu LTS
 
 Stwórz obraz dockerowy, który bazuje na najnowszej wersji Ubuntu LTS oraz który zawiera paczki:
 
@@ -63,8 +63,8 @@ Rozwiązanie: [Dockerfile](https://github.com/jakubfigura/functional_programming
 
 ![Demo](https://github.com/user-attachments/assets/f4b22ea9-7b0b-4117-a454-f51184b6624f)
 
-# Zadanie 3
-Zadanie 3 Scala
+# Zestaw 3
+Zestaw 3 Scala
 <br/>
 [Implementasja List](https://github.com/jakubfigura/functional_programming/blob/main/lab3/solutions3/src/main/scala/LinkedList.scala)
 <br/>
@@ -74,13 +74,17 @@ Do zadania 1 należy dodać kilka nowych endpointów, które:
 <br/>
 [Link do kodu](https://github.com/jakubfigura/functional_programming/blob/main/lab3/solutions3/src/main/scala/zad3.scala)
 <br/>
-❌ 3.5 zwróci wynik funkcji drop, która usuwa n elementów z listy dwukierunkowej
+✅ 3.5 zwróci wynik funkcji drop, która usuwa n elementów z listy dwukierunkowej
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/977bbe339d818ed05452a30d8e511ab154084428)
 <br/>
 ❌ 4.0 zwróci wynik funkcji dropWhile, która usuwa n elementów z listy dwukierunkowej, które spełniają warunek funkcji (parametr); należy wykorzystać podejście pattern match
 <br/>
 ❌ 4.5 zwróci wynik funkcji foldLeft wykorzystując do tego companion object
 <br/>
 ❌ 5.0 zwróci wynik funkcji concatenate na dwóch listach (parametry), która zwraca jedną listę
+<br/>
+![DEMO do zadania 3 pkt 1 i 2](https://github.com/user-attachments/assets/02eca4d3-3062-4b7a-be44-4ad50a188259)
 
 
 
