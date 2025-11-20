@@ -110,6 +110,16 @@ object zad4 extends cask.MainRoutes{
 
     }
 
+    @cask.postJson("/merge")
+    def mergeEndpoint(listA: Option[Seq[ujson.Value]] = None, listB: Option[Seq[ujson.Value]] = None): Option[ujson.Obj] = {
+        
+        (listA, listB) match {
+            case (Some(a), Some(b)) => Some(Obj("Merged lists" -> (a ++ b).toList))
+            case _ => None
+        }
+
+    }
+
     
 
 
