@@ -1,0 +1,5 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E171] Type Error: /Users/kuba.figura/CS2025/functional_programming/lab4/solutions4/src/main/scala/zad4.scala:67:44 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m67 |[0m        [33mval[0m [36mnameMaybe[0m: [35mOption[0m[[35mString[0m] = Some()[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                        ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mmissing argument for parameter value of [33mmethod[0m [35mapply[0m in [33mobject[0m [35mSome[0m: (value: A): Some[A][0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
