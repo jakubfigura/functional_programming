@@ -111,7 +111,7 @@ oraz map
 <br/>
 ❌ 5.0 zwróci taki średnią (mean) z listy zwracając Either
 <br/>
-[Link do zadania]()
+[Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab4/solutions4/src/main/scala/zad4.scala)
 <br/>
 Demo do punktów 3.0 - 4.0
 
