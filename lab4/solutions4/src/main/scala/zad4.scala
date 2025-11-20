@@ -23,6 +23,7 @@ package solutions4
 
 import ujson.{Obj, Value}
 import ujson.Arr.from
+import scala.math._
 
 
 
@@ -70,6 +71,42 @@ object zad4 extends cask.MainRoutes{
 
         }
 
+
+    }
+
+    
+
+    def variance(list: List[ujson.Value]): ujson.Value = {
+
+        val data = list.collect {
+            case ujson.Num(n) => n
+        }
+        val n : Int = data.length
+
+        if(n == 0){
+            return Obj(
+            "ERROR" -> "The list is empty"
+            )
+        }
+        val mean = data.sum / n
+        val result = data.map(num => math.pow((num - mean),2)).sum / n
+
+        Obj(
+            "Variance" -> result
+        )
+
+
+
+    }
+    
+    @cask.postJson("/variance")
+    def varianceEndpoint(list: Option[Seq[ujson.Value]] = None) = {
+
+        list match{
+            case Some(seq) => variance(seq.toList)
+            case None => Obj("ERROR" -> "Please send the data")
+
+        }
 
     }
 
