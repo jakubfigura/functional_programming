@@ -86,6 +86,38 @@ Do zadania 1 należy dodać kilka nowych endpointów, które:
 <br/>
 ![DEMO do zadania 3 pkt 1 i 2](https://github.com/user-attachments/assets/02eca4d3-3062-4b7a-be44-4ad50a188259)
 
+# Zestaw 4
+Należy wykorzystać typ opcjonalny i rozszerzyć endpointy o endpoint,
+który:
+<br/>
+✅ 3.0 zwróci taki sam wynik jak zad.1 4.5 ale wykorzysta typ opcjonalny
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/531fffe623d3d743a58c1dab73dcea2abb536676)
+<br/>
+✅ 3.5 zwroci wariancję z listy; do implementacji wykorzystać należy typ
+opcjonalny
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/e8ea93ce6eda3330facddeec55de46c4ca08cb26)
+<br/>
+✅ 4.0 zwróci listę (option), która jest wynikiem połączenia dwóch list
+(option); w przypadku gdy jedna z list jest None, funkcja powinna
+zwrócić None
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/86e826a8c4da9d1d57dff29f0e29793211b6fdfa)
+<br/>
+❌ 4.5 zwróci listę za pomocą metody mojeMap[A,B,C](a: Option[A], b:
+Option[B])(f:(A,B)=>C):Option[C]; należy wykorzystać metodę flatMap
+oraz map
+<br/>
+❌ 5.0 zwróci taki średnią (mean) z listy zwracając Either
+<br/>
+[Link do zadania]()
+<br/>
+Demo do punktów 3.0 - 4.0
+
+
+
+
 
 
 
