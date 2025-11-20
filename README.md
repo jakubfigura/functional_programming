@@ -9,6 +9,7 @@
 1. [Zestaw 1](#Zestaw-1)
 2. [Zestaw 2](#Zestaw-2)
 3. [Zestaw 3](#Zestaw-3)
+4. [Zestaw 4](#Zestaw-4)
 <br/>
 
 # Zestaw 1
@@ -113,7 +114,8 @@ oraz map
 <br/>
 [Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab4/solutions4/src/main/scala/zad4.scala)
 <br/>
-Demo do punktów 3.0 - 4.0
+![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/2dec0e52-5c7f-49b3-9153-547a03688b3d)
+
 
 
 
