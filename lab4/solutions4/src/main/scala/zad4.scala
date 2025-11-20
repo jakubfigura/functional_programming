@@ -32,8 +32,46 @@ object zad4 extends cask.MainRoutes{
     override def host: String = "0.0.0.0"
     override def port: Int = 8080
 
+    //Zadanie 1
+    def append(list: List[ujson.Value], element: ujson.Value, index: Int): List[ujson.Value] = {
+
+        val (first_part, second_part) = list.splitAt(index)
+
+        first_part ::: (element :: second_part)
+    }
+
+    
 
 
+    @cask.postJson("/append")
+    def jsonEndpoint(list: Option[Seq[ujson.Value]] = None, element: Option[ujson.Value] = None, index: Option[Int] = None) = {
+
+        val optional_list = list.getOrElse(Seq.empty)
+        val optional_index = index.getOrElse(optional_list.length)
+        val dummy_element = element.getOrElse(ujson.Str("Send your data :D"))
+
+            
+        if (optional_index < 0 || optional_index > optional_list.length){
+
+            Obj(
+
+            "ERROR" -> s"Index $index out of bounds. Choose index from: 0...${optional_list.length}"
+
+            )
+        }else{
+
+            val newList = append(optional_list.toList, dummy_element, optional_index)
+
+            Obj(
+
+            "List with new element" -> newList
+
+            )
+
+        }
+
+
+    }
 
     
 
