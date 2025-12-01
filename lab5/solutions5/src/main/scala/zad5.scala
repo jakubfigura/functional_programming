@@ -6,7 +6,7 @@ import scala.math._
 
 
 
-object Exc1mapReduce extends MapReduce[List[Int], Int, Int, Int] {
+class ExcmapReduce extends MapReduce[List[Int], Int, Int, Int] {
   
   def mapper(input: List[Int]): Seq[KeyValue[Int, Int]] = {
     input.map(i => KeyValue(i, 1))
@@ -14,8 +14,7 @@ object Exc1mapReduce extends MapReduce[List[Int], Int, Int, Int] {
 
   def reducer(key: Int, values: Seq[Int]): KeyValue[Int, Int] = {
     KeyValue(key, values.sum)
-  }
-    
+  }    
   
 }
 
@@ -28,13 +27,14 @@ object zad5 extends cask.MainRoutes{
     
     /*3.0 zwróci słownik z liczbą powtarzających się liczb za pomocą funkcji
     mapreduce dla list z liczbami*/
-    
+
     @cask.postJson("/zad1")
     def Exc1EndPoint(list: Seq[ujson.Value]) = {
         val numList = list.map(_.num.toInt).toList
-        val mapped = Exc1mapReduce.mapper(numList)
+        val emr = ExcmapReduce()
+        val mapped = emr.mapper(numList)
         val reduced = mapped.groupBy(_.key).map { case (k, kvs) =>
-            Exc1mapReduce.reducer(k, kvs.map(_.value))
+            emr.reducer(k, kvs.map(_.value))
         }
         val result = reduced.map { case KeyValue(k, v) => k -> v }.toMap
         println(result)
@@ -45,6 +45,7 @@ object zad5 extends cask.MainRoutes{
         )
         
     }
+
 
 
     
