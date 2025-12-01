@@ -116,7 +116,27 @@ oraz map
 <br/>
 ![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/2dec0e52-5c7f-49b3-9153-547a03688b3d)
 
-
+# Zestaw 5
+Należy rozszerzyć endpointy o endpoint, który:
+<br/>
+✅ 3.0 zwróci słownik z liczbą powtarzających się liczb za pomocą funkcji mapreduce dla list z liczbami
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/eb73cca759d6fca4bdfbf6d6103eb7678cb231c6)
+<br/>
+✅ 3.5 zwróci słownik z liczbami podniesionymi do sześcianu za pomocą funkcji mapreduce dla list z liczbami
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/ba0af96c4b4f91c37e24894703ec788e96b9f8c7)
+<br/>
+❌ 4.0  zwróci słownik (student, godziny nauki), która wykorzysta funkcją mapreduce oraz groupBy dla słownika na wejściu
+<br/>
+❌ 4.5 zwróci słownik (zdanie, wektor), która wykorzysta funkcję mapreduce oraz bagOfWords
+<br/>
+❌ 5.0 zwróci słownik (student, średnia ocen), która wykorzysta funkcję mapreduce oraz join; na wejściu  są dwie listy: (numer_indeksu,
+student), (numer_indeksu, kurs, ocena)
+<br/>
+[Link do zadania](https://github.com/jakubfigura/functional_programming/tree/main/lab5)
+<br/>
+![Demo do punktów 3.0 - 3.5](https://github.com/user-attachments/assets/05f3dd61-7b38-4f27-baad-1827424ad4d5)
 
 
 
