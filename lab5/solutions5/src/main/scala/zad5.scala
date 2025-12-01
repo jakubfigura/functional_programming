@@ -50,13 +50,12 @@ object zad5 extends cask.MainRoutes{
     @cask.postJson("/zad2")
     def Exc2EndPoint(list: Seq[ujson.Value]) = {
         val numList = list.map(_.num.toInt).toList
-        val mapped = ExcmapReduce.mapper(numList)
+        val emr = ExcmapReduce()
+        val mapped = emr.mapper(numList)
         val reduced = mapped.groupBy(_.key).map { case (k, kvs) =>
-            ExcmapReduce.reducer(k, kvs.map(_.value))
+            emr.reducer(k, kvs.map(_.value))
         }
         val result = reduced.map { case KeyValue(k, v) => k -> v }.toMap
-        println(result)
-        
 
         Obj(
             "Słownik^3" -> result.map{case (k, v) => (k.toString, ujson.Num(pow(v,3)))}
