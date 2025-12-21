@@ -10,7 +10,8 @@
 2. [Zestaw 2](#Zestaw-2)
 3. [Zestaw 3](#Zestaw-3)
 4. [Zestaw 4](#Zestaw-4)
-4. [Zestaw 5](#Zestaw-5)
+5. [Zestaw 5](#Zestaw-5)
+6. [Zestaw 6](#Zestaw-6)
 <br/>
 
 # Zestaw 1
@@ -139,7 +140,35 @@ student), (numer_indeksu, kurs, ocena)
 <br/>
 ![Demo do punktów 3.0 - 3.5](https://github.com/user-attachments/assets/05f3dd61-7b38-4f27-baad-1827424ad4d5)
 
+# Zestaw 6
 
+Implementacja zadania 1 w języku Haskell. Jako framework webowy wykorzystano Scotty.
+<br/> 
+✅ 3.0 Zaimplementuj funkcję isSorted, która sprawdza czy dana funkcja
+jest posortowana zgodnie z podaną funkcją porównawczą
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/495f6e189add109329f2151659d7f5c21d902d4d)
+<br/>
+✅ 3.5 Zaimplementuj funkcję, która zsumuje liczby po wierszach z trzech
+list na wejściu;
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/d17ff0f070fadaeaf24131e7864d7dede0b8b778)
+<br/>
+✅ 4.0 Zaimplementuj funkcję setHead, która doda element na początku
+listy
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/031c5bae77a94c86025bbefb057d164cc3b5a5d3)
+<br/>
+❌ 4.5 Zaimplementuj funkcję append, która doda element we wskazanym
+miejscu w liście
+<br/>
+❌ 5.0 Zaimplementuj funkcję, która policzy kwadrat liczb z dwóch list
+(po wierszach) za pomocą funkcji map oraz funkcji anonimowej
+<br/>
+[Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab6/app/Main.hs)
+<br/>
+
+![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/0e3534e0-a417-4631-ac11-8859c3ee0c02)
 
 
 
