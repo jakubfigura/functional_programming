@@ -28,11 +28,20 @@ data SumListsRequest = SumListsRequest
         listC :: [Int]
     }deriving(Show, Generic)
 
+data SetHeadRequest = SetHeadRequest
+    {
+        newHead :: Int,
+        listH :: [Int]
+    }deriving(Show, Generic)
+
 
 instance FromJSON IsSortedRequest
 instance ToJSON IsSortedRequest
 instance FromJSON SumListsRequest
 instance ToJSON SumListsRequest
+instance FromJSON SetHeadRequest
+instance ToJSON SetHeadRequest
+
 
 -- funkcje sortujące dla dwóch przypadków
 sortedAsc :: (Ord a) => [a] -> Bool
@@ -54,6 +63,9 @@ isSorted _ _ = False
 sumLists :: Num a => [a] -> [a] -> [a] -> [a]
 sumLists as bs cs = map sum $ transpose [as,bs,cs]
 
+setHead:: a -> [a] -> [a]
+setHead a elements = a : elements
+
 
 main :: IO ()
 main = scotty 3000 $ do
@@ -72,6 +84,15 @@ main = scotty 3000 $ do
     post "/sumLists" $ do
         request <- jsonData :: ActionM SumListsRequest
         let result = sumLists (listA request) (listB request) (listC request)
+        json $ object
+            [
+                "result" .= result
+            ]
+
+    --Zadanie 3: nowa głowa list
+    post "/setHead" $ do
+        request <- jsonData :: ActionM SetHeadRequest
+        let result = setHead (newHead request) (listH request)
         json $ object
             [
                 "result" .= result
