@@ -6,6 +6,7 @@ module Main where
 -- import frameworku do web api
 import Web.Scotty
 import Data.Aeson (FromJSON, ToJSON, object, (.=))
+import Data.List (transpose)
 
 -- generowanie typów na podstawie instancji
 import GHC.Generics
@@ -19,8 +20,19 @@ data IsSortedRequest = IsSortedRequest
         operand :: String
     } deriving(Show, Generic)
 
+
+data SumListsRequest = SumListsRequest
+    {
+        listA :: [Int],
+        listB :: [Int],
+        listC :: [Int]
+    }deriving(Show, Generic)
+
+
 instance FromJSON IsSortedRequest
 instance ToJSON IsSortedRequest
+instance FromJSON SumListsRequest
+instance ToJSON SumListsRequest
 
 -- funkcje sortujące dla dwóch przypadków
 sortedAsc :: (Ord a) => [a] -> Bool
@@ -38,6 +50,10 @@ isSorted "<" xs = sortedAsc xs
 isSorted ">" xs = sortedDesc xs
 isSorted _ _ = False
 
+-- sumowanie trzech list wejściowych 
+sumLists :: Num a => [a] -> [a] -> [a] -> [a]
+sumLists as bs cs = map sum $ transpose [as,bs,cs]
+
 
 main :: IO ()
 main = scotty 3000 $ do
@@ -51,6 +67,15 @@ main = scotty 3000 $ do
             "operand" .= operand request,
             "sorted" .= result
             ]
-
+    
+    --Zadanie 2: Sumowanie trzech list 
+    post "/sumLists" $ do
+        request <- jsonData :: ActionM SumListsRequest
+        let result = sumLists (listA request) (listB request) (listC request)
+        json $ object
+            [
+                "result" .= result
+            ]
+    
     
 
