@@ -47,6 +47,17 @@ runRandList :: Int -> Int -> [Int]
 runRandList seed n =
     evalState (randList n) seed
 
+--zadanie 2
+nextRandDouble :: Rand Double
+nextRandDouble = do
+    seed <- Control.Monad.State.get
+    let a = 1103515245
+        c = 12345
+        m = 2^31
+        seed' = (a * seed + c) `mod` m
+    Control.Monad.State.put seed'
+    return (fromIntegral seed' / fromIntegral m)
+
 
 main = do
   initialSeed <- getSystemSeed
@@ -71,7 +82,13 @@ main = do
           "Random number" .= randomNumber
         ]
     
+    -- zadanie 2 endpoint
+    -- 3.5 zwróci wartość między 0, a 1 (Double) z wyłączeniem 1
     post "/randDouble" $ do
-       json $ object
+      seed <- liftIO $ readIORef state
+      let (randomDouble, seed') = Control.Monad.State.runState nextRandDouble seed
+      liftIO $ writeIORef state seed'
+      json $ object
         [
+          "Random double from [0, 1)" .= randomDouble
         ]
