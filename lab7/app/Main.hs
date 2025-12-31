@@ -58,6 +58,26 @@ nextRandDouble = do
     Control.Monad.State.put seed'
     return (fromIntegral seed' / fromIntegral m)
 
+--zadanie 3
+randIntDouble :: Rand (Int, Double)
+randIntDouble = do
+  integer_rand <- nextRand
+  double_rand <- nextRandDouble
+  return (integer_rand, double_rand)
+
+randDoubleInt :: Rand (Double, Int)
+randDoubleInt = do
+  double_rand <- nextRandDouble
+  integer_rand <- nextRand
+  return (double_rand, integer_rand)
+
+rand3Double :: Rand (Double, Double, Double)
+rand3Double = do
+  double1 <- nextRandDouble
+  double2 <- nextRandDouble
+  double3 <- nextRandDouble
+  return(double1, double2, double3)
+
 
 main = do
   initialSeed <- getSystemSeed
@@ -92,3 +112,19 @@ main = do
         [
           "Random double from [0, 1)" .= randomDouble
         ]
+
+    --zadanie 3 endpoint 
+    -- 4.0 zwróci pary (Int, Double), (Double, Int) oraz krotki (Double,Double, Double) wykorzystując funkcje z ocen 3.0 oraz 3.5
+    post "/krotki" $ do
+      seed <- liftIO $ readIORef state
+      let (randomIntDouble, seed1) = Control.Monad.State.runState randIntDouble seed
+      let (randomDoubleInt, seed2) = Control.Monad.State.runState randDoubleInt seed1
+      let (random3Double, seed3) = Control.Monad.State.runState rand3Double seed2
+      liftIO $ writeIORef state seed3
+      json $ object
+        [
+          "Random (Int, Double) -> " .= randomIntDouble
+        , "Random (Double, Int) -> ".= randomDoubleInt
+        , "Random (Double, Double, Double) -> " .= random3Double
+        ]
+
