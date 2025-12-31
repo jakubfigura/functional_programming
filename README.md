@@ -12,6 +12,7 @@
 4. [Zestaw 4](#Zestaw-4)
 5. [Zestaw 5](#Zestaw-5)
 6. [Zestaw 6](#Zestaw-6)
+7. [Zestaw 7](#Zestaw-7)
 <br/>
 
 # Zestaw 1
@@ -170,6 +171,29 @@ miejscu w liście
 
 ![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/0e3534e0-a417-4631-ac11-8859c3ee0c02)
 
+# Zestaw 7
+Należy zaimplementować w Haskellu endpointy, które:
+<br/>
+✅ 3.0 zwróci wartość między 0, a maxvalue of Int włącznie
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/cfbc3bc2f1b0989f57de61fbef59bed87258f7ef)
+<br/>
+✅ 3.5 zwróci wartość między 0, a 1 (Double) z wyłączeniem 1
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/a3220db6d2935a8b96bac4149ee1b541d3c126c3)
+<br/>
+✅ 4.0 zwróci pary (Int, Double), (Double, Int) oraz krotki (Double,
+Double, Double) wykorzystując funkcje z ocen 3.0 oraz 3.5
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/b8b7a77fe417c51e4d3e5810cafd31ebda31e5ea)
+<br/>
+❌ 4.5 zwróci wartość jak w funkcji 3.5, ale wykorzysta map
+<br/>
+❌ 5.0 zwróci wartość jak w funkcji 3.5, ale wykorzysta flatMap
+<br/>
+[Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab7/app/Main.hs)
+<br/>
+![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/429d3948-4258-4260-adc6-fc4d2c406a99)
 
 
 
