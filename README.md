@@ -194,6 +194,41 @@ Double, Double) wykorzystując funkcje z ocen 3.0 oraz 3.5
 [Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab7/app/Main.hs)
 <br/>
 ![Demo do punktów 3.0 - 4.0](https://github.com/user-attachments/assets/429d3948-4258-4260-adc6-fc4d2c406a99)
+# Zestaw 8
+Zadanie 8 Monoidy, monady, funktory. Należy zaimplementować w Haskellu endpointy, które:
+<br/>
+3.0 wykorzysta metodę map fuktora do wykonania funkcji dodawania lub
+odejmowania na dwóch wartość przyjętych na wejściu
+<br/>
+3.5 zwróci wartość konkatenacji trzech list za pomocą monoidy
+<br/>
+4.0 zwróci wartość sumy listy liczb lub zwróci nil; zaimplementuj wykorzystując monady
+<br/>
+4.5 zwróci zadanie z zestawy 6 na ocenę 4.0 i wykorzysta metodę combine oraz join
+<br/>
+5.0 zwróci dla listy minimum 3 elementów typu int mapę: liczba elementów, suma,  wartość minimalna, wartość maksymalna; wykorzysta do tego monadę oraz metodę foldMap
+<br/>
 
+#Zestaw 9
+Zadanie 9 Wątki
+<br/>
+Należy zaimplementowaś w j. JavaScript endpointy, które:
+<br/>
+3.0 zwróci wartość binarną czy podana na wejściu liczba jest liczbą
+pierwszą; wykorzysta Promise
+<br/>
+3.5  zwróci posortowaną listę; wykorzysta Promise
+<br/>
+4.0 zwróci wynik funkcji z zad. 5 na 4.0 (mapreduce); wykorzysta
+worker_threads
+<br/>
+4.5  zwróci wynik bagOfWords dla danego tekstu na wejściu; stworzy
+pulę workterów
+<br/>
+5.0 zwróci wynik funkcji z zad. 5 na 4.5; wykorzysta Promise.all oraz
+funkcję map
+<br/>
+Należy wykorzystać next.js albo express.js.
+<br/>
 
 
