@@ -250,8 +250,10 @@ funkcję map
 <br/>
 Wykorzystano express.js jako framework webowy oraz worker_threads z node.js
 <br/>
+<br/>
 ![Demo](https://github.com/user-attachments/assets/56b1f4c6-7a6c-4d9c-99b1-6180c36f64dc)
 <br/>
+
 
 
 
