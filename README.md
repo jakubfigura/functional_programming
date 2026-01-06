@@ -224,21 +224,34 @@ odejmowania na dwóch wartość przyjętych na wejściu
 <br/>
 Należy zaimplementowaś w j. JavaScript endpointy, które:
 <br/>
-3.0 zwróci wartość binarną czy podana na wejściu liczba jest liczbą
+✅ 3.0 zwróci wartość binarną czy podana na wejściu liczba jest liczbą
 pierwszą; wykorzysta Promise
 <br/>
-3.5  zwróci posortowaną listę; wykorzysta Promise
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/dcf7299c91f7f96b5aef1ff73101839beb175543)
 <br/>
-4.0 zwróci wynik funkcji z zad. 5 na 4.0 (mapreduce); wykorzysta
+Wersja bardziej "funkcyjna" bez explicite napisanej pętli for. 
+<br/>
+[Link do poprawki commita](https://github.com/jakubfigura/functional_programming/blob/main/lab9/zad9.js)
+<br/>
+✅ 3.5  zwróci posortowaną listę; wykorzysta Promise
+<br/>
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/447079e4516443f8e0a5d13947628c4f32d61faa)
+<br/>
+✅ 4.0 zwróci wynik funkcji z zad. 5 na 4.0 (mapreduce); wykorzysta
 worker_threads
 <br/>
-4.5  zwróci wynik bagOfWords dla danego tekstu na wejściu; stworzy
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/005625144188167518e3a39d9f0ce312e89aca32)
+<br/>
+❌ 4.5  zwróci wynik bagOfWords dla danego tekstu na wejściu; stworzy
 pulę workterów
 <br/>
-5.0 zwróci wynik funkcji z zad. 5 na 4.5; wykorzysta Promise.all oraz
+❌ 5.0 zwróci wynik funkcji z zad. 5 na 4.5; wykorzysta Promise.all oraz
 funkcję map
 <br/>
-Należy wykorzystać next.js albo express.js.
+Wykorzystano express.js jako framework webowy oraz worker_threads z node.js
 <br/>
+![Demo](https://github.com/user-attachments/assets/56b1f4c6-7a6c-4d9c-99b1-6180c36f64dc)
+<br/>
+
 
 
