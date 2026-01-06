@@ -3,7 +3,7 @@ const app = express()
 
 app.use(express.json())
 
-const port = process.env.PORT || 3000
+const port = 3000
 
 // 3.0 zwróci wartość binarną czy podana na wejściu liczba jest liczbą
 // pierwszą; wykorzysta Promise
@@ -35,21 +35,20 @@ function testPrime(number) {
     })
 }
 
-app.post('/isPrime', (req, res) => {
-    const number = req.body.number;
+app.post('/isPrime', async (req, res) => {
+    try{
+        const number = req.body.number;
+        const isPrime = await testPrime(number)
 
-    testPrime(number)
-        .then(isPrime => {
-            res.json({
-                number: number,
-                isPrime: isPrime
-            })
+        res.json({
+            number: number, 
+            isPrime: isPrime
         })
-        .catch(error => {
+    }catch(error){
             res.status(400).json({
                 error: error
             })
-        })
+    }
 })
 
 
