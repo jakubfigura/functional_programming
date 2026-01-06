@@ -13,6 +13,9 @@
 5. [Zestaw 5](#Zestaw-5)
 6. [Zestaw 6](#Zestaw-6)
 7. [Zestaw 7](#Zestaw-7)
+7. [Zestaw 8](#Zestaw-8)
+7. [Zestaw 9](#Zestaw-9)
+
 <br/>
 
 # Zestaw 1
@@ -209,8 +212,7 @@ odejmowania na dwóch wartość przyjętych na wejściu
 5.0 zwróci dla listy minimum 3 elementów typu int mapę: liczba elementów, suma,  wartość minimalna, wartość maksymalna; wykorzysta do tego monadę oraz metodę foldMap
 <br/>
 
-#Zestaw 9
-Zadanie 9 Wątki
+# Zestaw 9
 <br/>
 Należy zaimplementowaś w j. JavaScript endpointy, które:
 <br/>
