@@ -54,10 +54,34 @@ app.post('/isPrime', (req, res) => {
     })
 })
 
-//endpoint do punktu 2
 
+// 3.5  zwróci posortowaną listę; wykorzysta Promise
+function sortList(data){
+    return new Promise((resolve, reject) => {
+        if (!Array.isArray(data)){
+            reject("Provide array!")
+            return
+        }
+        resolve(data.sort())
+
+    })
+}
+
+//endpoint do punktu 2
 app.post('/sortList', (req, res) => {
     const {data} = req.body
+    console.log(data)
+    sortList(data)
+        .then(result => {
+            res.json({ 
+                sortedList : result
+            })
+        })
+        .catch(error => {
+            res.status(400).json({
+            error: error
+        })
+    })
 
 })
 
