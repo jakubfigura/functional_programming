@@ -15,15 +15,19 @@ function isPrime(number){
             return
         }
 
+        if (number === 0 || number === 1){
+            reject("Number is neither prime nor composite")
+        }
+
         if(typeof number !== "number"){
             reject("Provide numerical values")
         }
-
-        if(number < 2){
-            resolve(false)
-            return
-        }
-
+        /*
+        Bardziej funkcyjnie? 
+        const limit = Math.floor(Math.sqrt(number))
+        const checkTheNumber = Array.form({length : limit - 1}, (_, i) => i + 2).some(i => number % i === 0)
+        resolve(!checkTheNumber)
+        */
 
         for(let i = 2; i <= Math.sqrt(number); i++){
             if(number % i === 0){
