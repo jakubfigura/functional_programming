@@ -200,16 +200,24 @@ Double, Double) wykorzystując funkcje z ocen 3.0 oraz 3.5
 # Zestaw 8
 Zadanie 8 Monoidy, monady, funktory. Należy zaimplementować w Haskellu endpointy, które:
 <br/>
-3.0 wykorzysta metodę map fuktora do wykonania funkcji dodawania lub
+✅ 3.0 wykorzysta metodę map fuktora do wykonania funkcji dodawania lub
 odejmowania na dwóch wartość przyjętych na wejściu
 <br/>
-3.5 zwróci wartość konkatenacji trzech list za pomocą monoidy
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/b5f2cdaf51e8ef7abc8d619d45e65e8e5a409ee6)
 <br/>
-4.0 zwróci wartość sumy listy liczb lub zwróci nil; zaimplementuj wykorzystując monady
+✅ 3.5 zwróci wartość konkatenacji trzech list za pomocą monoidy
 <br/>
-4.5 zwróci zadanie z zestawy 6 na ocenę 4.0 i wykorzysta metodę combine oraz join
+[Link do commita](https://github.com/jakubfigura/functional_programming/commit/3a4ffdd4026067a5e85614fe2d0a1da8e7d1b012)
 <br/>
-5.0 zwróci dla listy minimum 3 elementów typu int mapę: liczba elementów, suma,  wartość minimalna, wartość maksymalna; wykorzysta do tego monadę oraz metodę foldMap
+❌ 4.0 zwróci wartość sumy listy liczb lub zwróci nil; zaimplementuj wykorzystując monady
+<br/>
+❌ 4.5 zwróci zadanie z zestawy 6 na ocenę 4.0 i wykorzysta metodę combine oraz join
+<br/>
+❌ 5.0 zwróci dla listy minimum 3 elementów typu int mapę: liczba elementów, suma,  wartość minimalna, wartość maksymalna; wykorzysta do tego monadę oraz metodę foldMap
+<br/>
+[Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab8/app/Main.hs)
+<br/>
+![Demo](https://github.com/user-attachments/assets/61a5b169-fff8-467e-98ac-34c16f7f0058)
 <br/>
 
 # Zestaw 9
