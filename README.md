@@ -13,8 +13,10 @@
 5. [Zestaw 5](#Zestaw-5)
 6. [Zestaw 6](#Zestaw-6)
 7. [Zestaw 7](#Zestaw-7)
-7. [Zestaw 8](#Zestaw-8)
-7. [Zestaw 9](#Zestaw-9)
+8. [Zestaw 8](#Zestaw-8)
+9. [Zestaw 9](#Zestaw-9)
+10. [Zestaw 10](#Zestaw-10)
+
 
 <br/>
 
@@ -261,10 +263,51 @@ Wykorzystano express.js jako framework webowy oraz worker_threads z node.js
 Przygotuj 3 wybrane funkcje w JS oraz udostępnij w ramach usługi Azure
 Functions
 <br/>
-Przygotuj 3 wybrane funkcje w Haskellu w ramach Azure App Services.
-Wykorzystaj obraz dockerowy.
-
+[Link do commita 1](https://github.com/jakubfigura/azure_js/commit/cb3be4f4f5a42db39b28b2f8787e3b7b3df04690)
+[Link do commita 2](https://github.com/jakubfigura/azure_js/commit/457e7b4180015d92e2ca234f43773037c85acf51)
 <br/>
+Przygotuj 3 wybrane funkcje w Haskellu w ramach Azure App Services. Wykorzystaj obraz dockerowy.
+<br/>
+[Link do commita](https://github.com/jakubfigura/azure_functional_programming/commit/5290ff5cbc7797d0a4e5ded45cdb128a6018d094)
+[Lind do dockerfile](https://github.com/jakubfigura/azure_functional_programming/blob/main/Dockerfile.linux)
+<br/>
+
+### JavaScript Azure Functions
+
+### isPrime Azure
+```
+curl -X POST https://figuraazureapp-c4acgyf8btaeffg6.swedencentral-01.azurewebsites.net/api/isPrime \
+ -H "Content-Type: application/json" \
+ -d '{"number" : 7}'
+```
+
+### isSorted JS Azure
+
+```
+curl -X POST https://figuraazureapp-c4acgyf8btaeffg6.swedencentral-01.azurewebsites.net/api/sortList \
+ -H "Content-Type: application/json" \
+ -d '{"list" : [6, 1, 2, 2, 5, 7, 1, 3, 8, 9]}'
+
+```
+
+### studyHours
+
+```
+curl -X POST https://figuraazureapp-c4acgyf8btaeffg6.swedencentral-01.azurewebsites.net/api/dictionary \
+ -H "Content-Type: application/json" \
+ -d '{
+    "students" : [
+        {"name" : "Jakub", "hours" : 12},
+        {"name" : "Szymon", "hours" : 7},
+        {"name" : "Jakub", "hours" :5},
+        {"name" : "Szymon", "hours" : 15},
+        {"name" : "Jakub", "hours" : 2}
+
+    ]
+}'
+```
+
+[Repozytorium z Azure Functions](https://github.com/jakubfigura/azure_js)
 
 ## Haskell
 ```
