@@ -254,6 +254,50 @@ Wykorzystano express.js jako framework webowy oraz worker_threads z node.js
 ![Demo](https://github.com/user-attachments/assets/56b1f4c6-7a6c-4d9c-99b1-6180c36f64dc)
 <br/>
 
+# Zestaw 10
+
+Przygotuj 3 wybrane funkcje w JS oraz udostępnij w ramach usługi Azure
+Functions
+<br/>
+Przygotuj 3 wybrane funkcje w Haskellu w ramach Azure App Services.
+Wykorzystaj obraz dockerowy.
+
+<br/>
+
+## Haskell
+```
+https://jfhaskapp-g4bzandzabe2fsbe.swedencentral-01.azurewebsites.net/sumLists
+```
+<br/>
+
+#### isSorted
+```
+curl -X POST https://jfhaskapp-g4bzandzabe2fsbe.swedencentral-01.azurewebsites.net/isSorted \
+  -H "Content-Type: application/json" \
+  -d '{"list": [1,2,3,4,4,5,6,7], "operand": "<"}'
+```
+<br/>
+
+
+#### sumLists
+```
+curl -X POST https://jfhaskapp-g4bzandzabe2fsbe.swedencentral-01.azurewebsites.net/sumLists \
+  -H "Content-Type: application/json" \
+  -d '{"listA": [1,2,3,4,5,6,7,8], "listB": [1,2,3,4,5,6,7,8], "listC": [1,1,1,1,1,1,1,1]}'
+```
+<br/>
+
+#### setHead
+```
+curl -X POST https://jfhaskapp-g4bzandzabe2fsbe.swedencentral-01.azurewebsites.net/setHead \
+  -H "Content-Type: application/json" \
+  -d '{"newHead": 6, "listH": [7,1,7,2,5,6,3,4]}'
+```
+<br/>
+![Demo](https://github.com/user-attachments/assets/b3845e98-833c-4742-bdc1-a1ebe5dc9300)
+<br/>
+
+
 
 
 
