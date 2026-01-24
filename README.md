@@ -217,6 +217,7 @@ odejmowania na dwóch wartość przyjętych na wejściu
 <br/>
 [Link do zadania](https://github.com/jakubfigura/functional_programming/blob/main/lab8/app/Main.hs)
 <br/>
+
 ![Demo](https://github.com/user-attachments/assets/61a5b169-fff8-467e-98ac-34c16f7f0058)
 <br/>
 
@@ -294,6 +295,7 @@ curl -X POST https://jfhaskapp-g4bzandzabe2fsbe.swedencentral-01.azurewebsites.n
   -d '{"newHead": 6, "listH": [7,1,7,2,5,6,3,4]}'
 ```
 <br/>
+
 ![Demo](https://github.com/user-attachments/assets/b3845e98-833c-4742-bdc1-a1ebe5dc9300)
 <br/>
 
